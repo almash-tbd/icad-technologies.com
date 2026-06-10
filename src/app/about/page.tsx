@@ -252,6 +252,8 @@ export default function AboutPage() {
 
   return (
     <div ref={pageRef}>
+      <title>About Us | ICAD Technologies</title>
+      <meta name="description" content="Discover ICAD Technologies' legacy, architectural methodologies, core engineering pillars, and global operational presence spanning 45 countries." />
       <Navbar />
       <main className="flex-1 mt-20">
         {/* Hero Section */}
@@ -455,12 +457,12 @@ export default function AboutPage() {
           <div className="timeline-horizontal-wrapper relative w-full flex items-center">
             <div className="timeline-horizontal-track flex gap-xl pl-[20%] pr-[20%] py-md relative">
               {/* Horizontal Connector Line */}
-              <div className="absolute top-[45px] left-0 right-0 h-[2px] bg-outline-variant/60 z-0"></div>
+              <div className="absolute top-[64px] left-0 right-0 h-[2px] bg-outline-variant/60 z-0"></div>
               
               {milestones.map((ms, idx) => (
                 <div key={idx} className="timeline-horizontal-card w-[350px] shrink-0 flex flex-col items-center text-center relative z-10">
                   {/* Timeline Dot/Year */}
-                  <div className="bg-secondary text-on-secondary w-14 h-14 rounded-full flex items-center justify-center font-bold text-headline-md border-4 border-surface shadow-sm mb-md dark:bg-secondary-fixed dark:text-on-secondary-fixed">
+                  <div className="bg-secondary text-on-secondary w-20 h-20 shrink-0 rounded-full flex items-center justify-center font-bold text-headline-md border-4 border-surface shadow-sm mb-md dark:bg-secondary-fixed dark:text-on-secondary-fixed">
                     {ms.year}
                   </div>
                   {/* Text Details */}
