@@ -115,7 +115,7 @@ export default function BlogFilterGrid() {
                         </span>
                       </div>
                     </div>
-                    <div className="flex items-center gap-base text-label-sm text-outline font-bold tracking-widest uppercase">
+                    <div className="flex items-center gap-base text-label-sm text-zinc-900 dark:text-zinc-300 font-bold tracking-widest uppercase">
                       <span>{art.tagline}</span>
                       <span>•</span>
                       <span>{art.date}</span>
