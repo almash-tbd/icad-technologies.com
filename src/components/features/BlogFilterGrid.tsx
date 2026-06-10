@@ -136,23 +136,6 @@ export default function BlogFilterGrid() {
                     </Link>
                   </article>
                 ))}
-
-                {/* Editorial Cross-Sell Box */}
-                <div className="lg:col-span-2 bg-primary text-on-primary rounded-xl p-lg flex flex-col justify-between group hover:bg-zinc-900 dark:hover:bg-zinc-200 transition-colors min-h-[300px] mt-lg">
-                  <div>
-                    <h2 className="text-display-lg-mobile md:text-display-lg font-display-lg mb-md">
-                      Need a custom technical roadmap?
-                    </h2>
-                    <p className="text-on-primary/80 font-body-lg max-w-md">
-                      Our consultants specialize in translating complex technological trends into actionable business strategies.
-                    </p>
-                  </div>
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-md mt-xl">
-                    <Link href="/contact">
-                      <Button variant="white">Speak with an Expert</Button>
-                    </Link>
-                  </div>
-                </div>
               </div>
 
               {/* Pagination Controls */}
@@ -191,6 +174,25 @@ export default function BlogFilterGrid() {
                   </button>
                 </div>
               )}
+
+              {/* Editorial Cross-Sell Box */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-lg pt-lg">
+                <div className="lg:col-span-2 bg-primary text-on-primary rounded-xl p-lg flex flex-col justify-between group hover:bg-zinc-900 dark:hover:bg-zinc-200 transition-colors min-h-[300px]">
+                  <div>
+                    <h2 className="text-display-lg-mobile md:text-display-lg font-display-lg mb-md">
+                      Need a custom technical roadmap?
+                    </h2>
+                    <p className="text-on-primary/80 font-body-lg max-w-md">
+                      Our consultants specialize in translating complex technological trends into actionable business strategies.
+                    </p>
+                  </div>
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-md mt-xl">
+                    <Link href="/contact">
+                      <Button variant="white">Speak with an Expert</Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>
