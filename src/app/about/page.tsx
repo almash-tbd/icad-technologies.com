@@ -504,7 +504,7 @@ export default function AboutPage() {
                 <Link href="/careers">
                   <Button variant="secondary" size="lg">Explore Global Careers</Button>
                 </Link>
-                <Link href="/about#life">
+                <Link href="/careers#life">
                   <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
                     Life at ICAD
                   </Button>
