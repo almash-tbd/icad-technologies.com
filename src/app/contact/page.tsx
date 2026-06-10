@@ -279,40 +279,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Departmental Emails */}
-            <div className="neumorphic-pressed p-lg flex-grow space-y-md">
-              <h3 className="font-headline-md text-headline-md text-primary dark:text-on-primary">
-                Departmental Directory
-              </h3>
-              <div className="space-y-sm">
-                <div className="flex justify-between items-center p-sm hover:bg-surface-container-high dark:hover:bg-primary-container/40 rounded-lg transition-colors cursor-pointer group">
-                  <span className="font-label-md text-label-md text-on-surface dark:text-on-primary">
-                    Strategic Partnerships
-                  </span>
-                  <span className="text-secondary dark:text-secondary-fixed opacity-0 group-hover:opacity-100 transition-opacity text-label-md font-bold">
-                    info@icadtechnologies.com
-                  </span>
-                </div>
-                
-                <div className="flex justify-between items-center p-sm hover:bg-surface-container-high dark:hover:bg-primary-container/40 rounded-lg transition-colors cursor-pointer group">
-                  <span className="font-label-md text-label-md text-on-surface dark:text-on-primary">
-                    Talent Acquisition
-                  </span>
-                  <span className="text-secondary dark:text-secondary-fixed opacity-0 group-hover:opacity-100 transition-opacity text-label-md font-bold">
-                    info@icadtechnologies.com
-                  </span>
-                </div>
-                
-                <div className="flex justify-between items-center p-sm hover:bg-surface-container-high dark:hover:bg-primary-container/40 rounded-lg transition-colors cursor-pointer group">
-                  <span className="font-label-md text-label-md text-on-surface dark:text-on-primary">
-                    Customer Success
-                  </span>
-                  <span className="text-secondary dark:text-secondary-fixed opacity-0 group-hover:opacity-100 transition-opacity text-label-md font-bold">
-                    info@icadtechnologies.com
-                  </span>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
 
