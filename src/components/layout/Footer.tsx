@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Handshake, Network } from "lucide-react";
 
 export default function Footer() {
@@ -9,9 +10,16 @@ export default function Footer() {
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter mb-xl">
         {/* Column 1: Brand Info */}
         <div className="space-y-md">
-          <span className="text-headline-md font-headline-md font-bold text-primary dark:text-on-primary">
-            ICAD Technologies
-          </span>
+          <Link href="/" className="inline-block group">
+            <Image
+              src="/logo/ICADLogo-02.png"
+              alt="ICAD Technologies Logo"
+              width={200}
+              height={48}
+              className="h-9 lg:h-11 w-auto object-contain group-hover:scale-102 transition-transform duration-300"
+              priority
+            />
+          </Link>
           <p className="text-body-md text-on-surface-variant dark:text-on-primary-container/85 max-w-xs leading-relaxed">
             Leaders in high-performance enterprise technology consulting and architectural implementation.
           </p>

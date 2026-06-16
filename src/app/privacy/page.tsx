@@ -64,7 +64,7 @@ export default function PrivacyPage() {
           <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-xl items-start">
             
             {/* Sidebar quick overview card - Takes 4 columns */}
-            <div className="lg:col-span-4 space-y-md sticky top-28">
+            <div className="lg:col-span-4 space-y-md lg:sticky lg:top-28">
               <div className="neumorphic-raised p-lg rounded-2xl bg-white dark:bg-primary-container border border-outline-variant/30 space-y-md">
                 <ShieldCheck className="w-10 h-10 text-secondary" />
                 <h3 className="text-headline-md font-headline-md text-primary dark:text-on-primary">

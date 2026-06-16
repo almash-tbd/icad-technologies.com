@@ -87,7 +87,7 @@ export default function SmoothScrollProvider({ children }: { children: React.Rea
     };
   }, []);
 
-  // Handle scrolling to URL hash on initial load and route changes
+  // Handle scrolling to top or URL hash on route changes
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
@@ -104,6 +104,11 @@ export default function SmoothScrollProvider({ children }: { children: React.Rea
       }, 250);
 
       return () => clearTimeout(timer);
+    } else {
+      // If no hash is present, scroll to the top of the page immediately
+      if (lenisRef.current) {
+        lenisRef.current.scrollTo(0, { immediate: true });
+      }
     }
   }, [pathname]);
 

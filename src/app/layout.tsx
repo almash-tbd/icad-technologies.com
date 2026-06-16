@@ -28,6 +28,13 @@ export const metadata: Metadata = {
   title: "ICAD Technologies | Global Excellence in Tech Consulting",
   description: "Strategic tech consulting and high-performance digital engineering for enterprise leaders.",
   metadataBase: new URL("https://icadtech.com"),
+  icons: {
+    icon: [
+      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/favicon/favicon.ico",
+  },
   openGraph: {
     title: "ICAD Technologies | Global Excellence in Tech Consulting",
     description: "Strategic tech consulting and high-performance digital engineering for enterprise leaders.",

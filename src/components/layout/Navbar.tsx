@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Laptop, Shield, Brain, Cloud, Database, BarChart3, Search, Megaphone, HelpCircle, Coins, Factory, Truck, Activity } from "lucide-react";
 
@@ -83,10 +84,15 @@ export default function Navbar() {
         }`}
       >
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <span className="text-[20px] leading-none text-primary dark:text-on-primary group-hover:text-secondary dark:group-hover:text-secondary-fixed transition-colors font-display tracking-tighter uppercase font-extrabold">
-                ICAD Technologies
-              </span>
+            <Link href="/" className="flex items-center group">
+              <Image
+                src="/logo/ICADLogo-02.png"
+                alt="ICAD Technologies Logo"
+                width={200}
+                height={48}
+                className="h-9 lg:h-11 w-auto object-contain group-hover:scale-102 transition-transform duration-300"
+                priority
+              />
             </Link>
 
             {/* Desktop Menu */}
