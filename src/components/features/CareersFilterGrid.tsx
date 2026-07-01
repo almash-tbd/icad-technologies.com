@@ -1,14 +1,14 @@
 "use client";
- 
+
 import React, { useState } from "react";
 import { Search, Clock, ArrowRight, X, Upload, CheckCircle, Send } from "lucide-react";
 import { jobOpenings, departmentsList } from "@/data/careers";
 import Button from "@/components/ui/Button";
- 
+
 export default function CareersFilterGrid() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeDepartment, setActiveDepartment] = useState("All Departments");
-  
+
   // Modal Apply States
   const [selectedJob, setSelectedJob] = useState<typeof jobOpenings[0] | null>(null);
   const [appliedName, setAppliedName] = useState("");
@@ -17,7 +17,7 @@ export default function CareersFilterGrid() {
   const [appliedResume, setAppliedResume] = useState<File | null>(null);
   const [appliedCover, setAppliedCover] = useState("");
   const [appSubmitted, setAppSubmitted] = useState(false);
- 
+
   const handleApplySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const data = new FormData();
@@ -28,7 +28,7 @@ export default function CareersFilterGrid() {
     if (appliedResume) {
       data.append("resume", appliedResume);
     }
- 
+
     try {
       // Simulate form submission delay client-side
       await new Promise((resolve) => setTimeout(resolve, 800));
@@ -45,7 +45,7 @@ export default function CareersFilterGrid() {
       setAppSubmitted(true);
     }
   };
- 
+
   const handleClose = () => {
     setSelectedJob(null);
     setAppliedName("");
@@ -55,7 +55,7 @@ export default function CareersFilterGrid() {
     setAppliedCover("");
     setAppSubmitted(false);
   };
- 
+
   // Filtering logic
   const filteredJobs = jobOpenings.filter((job) => {
     const matchesSearch =
@@ -86,36 +86,7 @@ export default function CareersFilterGrid() {
           </p>
         </div>
 
-        {/* Filters and Search Bar */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-md items-center bg-surface-container-low p-md rounded-3xl border border-outline-variant/30 neumorphic-raised">
-          {/* Search Input */}
-          <div className="relative md:col-span-2">
-            <Search className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-outline" />
-            <input
-              type="text"
-              placeholder="Search positions..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 border border-outline-variant rounded-full text-label-md focus:outline-none focus:border-primary dark:bg-primary-container dark:text-on-primary dark:border-primary-fixed-dim/20"
-            />
-          </div>
 
-          {/* Department Filter */}
-          <div className="relative">
-            <select
-              value={activeDepartment}
-              onChange={(e) => setActiveDepartment(e.target.value)}
-              className="w-full px-4 py-2.5 bg-white dark:bg-primary-container border border-outline-variant rounded-full text-label-md focus:outline-none focus:border-primary cursor-pointer text-on-surface dark:text-on-primary dark:border-primary-fixed-dim/20 appearance-none"
-            >
-              {departmentsList.map((dept, idx) => (
-                <option key={idx} value={dept}>
-                  {dept}
-                </option>
-              ))}
-            </select>
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none border-l-4 border-r-4 border-t-4 border-transparent border-t-outline-variant"></div>
-          </div>
-        </div>
 
         {/* Jobs Grid */}
         {filteredJobs.length === 0 ? (
@@ -165,17 +136,17 @@ export default function CareersFilterGrid() {
           </div>
         )}
       </div>
- 
+
       {selectedJob && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-md">
           <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl w-full max-w-lg p-lg relative shadow-xl overflow-y-auto max-h-[90vh] space-y-md">
-            <button 
-              onClick={handleClose} 
+            <button
+              onClick={handleClose}
               className="absolute right-4 top-4 text-on-surface-variant hover:text-primary dark:text-zinc-400 dark:hover:text-white transition-colors"
             >
               <X className="w-6 h-6" />
             </button>
- 
+
             {appSubmitted ? (
               <div className="text-center py-lg space-y-md">
                 <div className="w-16 h-16 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mx-auto">
@@ -204,7 +175,7 @@ export default function CareersFilterGrid() {
                     {selectedJob.department}
                   </p>
                 </div>
- 
+
                 <form onSubmit={handleApplySubmit} className="space-y-sm">
                   <div className="space-y-xs">
                     <label className="block text-label-sm font-bold text-zinc-700 dark:text-zinc-300">
@@ -219,7 +190,7 @@ export default function CareersFilterGrid() {
                       placeholder="e.g. Vikram Malhotra"
                     />
                   </div>
- 
+
                   <div className="space-y-xs">
                     <label className="block text-label-sm font-bold text-zinc-700 dark:text-zinc-300">
                       Email Address
@@ -233,7 +204,7 @@ export default function CareersFilterGrid() {
                       placeholder="e.g. name@example.com"
                     />
                   </div>
- 
+
                   <div className="space-y-xs">
                     <label className="block text-label-sm font-bold text-zinc-700 dark:text-zinc-300">
                       Portfolio URL
@@ -246,7 +217,7 @@ export default function CareersFilterGrid() {
                       placeholder="https://linkedin.com/in/username"
                     />
                   </div>
- 
+
                   <div className="space-y-xs">
                     <label className="block text-label-sm font-bold text-zinc-700 dark:text-zinc-300">
                       Resume / CV File
@@ -276,7 +247,7 @@ export default function CareersFilterGrid() {
                       </div>
                     </div>
                   </div>
- 
+
                   <div className="space-y-xs">
                     <label className="block text-label-sm font-bold text-zinc-700 dark:text-zinc-300">
                       Cover Note
@@ -289,7 +260,7 @@ export default function CareersFilterGrid() {
                       placeholder="Briefly tell us why you are a great fit..."
                     />
                   </div>
- 
+
                   <div className="pt-xs">
                     <Button type="submit" variant="secondary" className="w-full h-10 rounded-full flex items-center justify-center gap-xs">
                       Submit Application <Send className="w-4 h-4" />

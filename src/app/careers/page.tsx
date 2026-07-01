@@ -98,7 +98,7 @@ export default function CareersPage() {
   const handleTalentPoolSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!talentPoolEmail.trim()) return;
- 
+
     try {
       // Simulate form submission delay client-side
       await new Promise((resolve) => setTimeout(resolve, 800));
@@ -127,7 +127,7 @@ export default function CareersPage() {
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent z-10"></div>
-          
+
           <div className="relative w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop z-10 py-xl space-y-md">
             <span className="careers-hero-tag inline-block px-md py-1 bg-secondary text-on-secondary font-label-sm text-label-sm rounded-full font-bold uppercase">
               Careers at ICAD
@@ -160,7 +160,7 @@ export default function CareersPage() {
                 A culture built on radical transparency, technical mastery, and the pursuit of excellence. We don&apos;t just build software; we architect the backbone of industries.
               </p>
             </div>
-            
+
             {/* Bento Grid layout */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-md md:grid-rows-2">
               <div className="gallery-card md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl shadow-sm aspect-[4/3] md:aspect-auto min-h-[300px] w-full h-full">
@@ -175,7 +175,7 @@ export default function CareersPage() {
                   <h4 className="text-on-primary font-headline-md">Collaborative Mastery</h4>
                 </div>
               </div>
-              
+
               <div className="gallery-card relative group overflow-hidden rounded-xl shadow-sm h-[200px] md:h-auto w-full">
                 <ParallaxImage
                   src="/images/cloud_architecture.png"
@@ -188,7 +188,7 @@ export default function CareersPage() {
                   <span className="text-on-primary font-label-md font-bold">Cutting-edge Stack</span>
                 </div>
               </div>
-              
+
               <div className="gallery-card relative group overflow-hidden rounded-xl shadow-sm h-[200px] md:h-auto w-full">
                 <ParallaxImage
                   src="/images/enterprise_erp.png"
@@ -201,7 +201,7 @@ export default function CareersPage() {
                   <span className="text-on-primary font-label-md font-bold">Strategic Solutions</span>
                 </div>
               </div>
-              
+
               <div className="gallery-card md:col-span-2 relative group overflow-hidden rounded-xl shadow-sm h-[200px] md:h-auto w-full">
                 <ParallaxImage
                   src="/images/about_office.png"
@@ -218,48 +218,7 @@ export default function CareersPage() {
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="testimonials-section py-xl bg-surface-container-low px-margin-mobile md:px-margin-desktop overflow-hidden">
-          <div className="max-w-[1280px] mx-auto space-y-xl">
-            <div className="text-center">
-              <h2 className="text-headline-lg font-headline-lg text-primary dark:text-on-primary">
-                Voices of the Team
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-lg">
-              <div className="testimonial-card p-lg neumorphic-raised rounded-2xl hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 flex flex-col justify-between space-y-md">
-                <p className="text-body-lg italic text-on-surface dark:text-on-primary-container/90 leading-relaxed">
-                  &ldquo;At ICAD, the scale of the problems we solve is unparalleled. You&apos;re not just writing code; you&apos;re designing systems that power modern enterprises.&rdquo;
-                </p>
-                <div className="flex items-center gap-md pt-md">
-                  <div className="w-12 h-12 rounded-full bg-surface-container-high dark:bg-primary flex items-center justify-center shrink-0 border border-outline-variant">
-                    <Terminal className="w-6 h-6 text-secondary" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-primary dark:text-on-primary">Arun Mehta</p>
-                    <p className="text-label-sm text-on-surface-variant dark:text-on-primary-container/70">Principal Solutions Architect</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="testimonial-card p-lg neumorphic-raised rounded-2xl hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 flex flex-col justify-between space-y-md">
-                <p className="text-body-lg italic text-on-surface dark:text-on-primary-container/90 leading-relaxed">
-                  &ldquo;The culture of precision here pushes you to be your best. The mentorship from industry titans has accelerated my career growth immensely.&rdquo;
-                </p>
-                <div className="flex items-center gap-md pt-md">
-                  <div className="w-12 h-12 rounded-full bg-surface-container-high dark:bg-primary flex items-center justify-center shrink-0 border border-outline-variant">
-                    <Brain className="w-6 h-6 text-secondary" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-primary dark:text-on-primary">Priya Sharma</p>
-                    <p className="text-label-sm text-on-surface-variant dark:text-on-primary-container/70">Lead Analytics Engineer</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* Benefits List */}
         <section className="benefits-section py-xl px-margin-mobile md:px-margin-desktop bg-surface">
@@ -271,7 +230,7 @@ export default function CareersPage() {
               <p className="text-body-md text-on-surface-variant dark:text-on-primary-container/85 max-w-xl">
                 We invest in our people so they can focus on what they do best: innovating. Our benefits are designed to support a high-performance life.
               </p>
-              
+
               <div className="space-y-sm pt-sm">
                 <div className="benefit-item flex items-start gap-md p-md border-b border-outline-variant/30">
                   <Award className="w-6 h-6 text-secondary shrink-0 mt-1" />
@@ -280,7 +239,7 @@ export default function CareersPage() {
                     <p className="text-label-sm text-on-surface-variant dark:text-on-primary-container/75">Clear growth paths, professional development, and performance-based recognition programs.</p>
                   </div>
                 </div>
-                
+
                 <div className="benefit-item flex items-start gap-md p-md border-b border-outline-variant/30">
                   <Globe className="w-6 h-6 text-secondary shrink-0 mt-1" />
                   <div>
@@ -288,7 +247,7 @@ export default function CareersPage() {
                     <p className="text-label-sm text-on-surface-variant dark:text-on-primary-container/75">Opportunities to collaborate across our distributed tech sectors.</p>
                   </div>
                 </div>
-                
+
                 <div className="benefit-item flex items-start gap-md p-md border-b border-outline-variant/30">
                   <Heart className="w-6 h-6 text-secondary shrink-0 mt-1" />
                   <div>
@@ -296,7 +255,7 @@ export default function CareersPage() {
                     <p className="text-label-sm text-on-surface-variant dark:text-on-primary-container/75">Premium healthcare, mental health support, and fitness stipends.</p>
                   </div>
                 </div>
-                
+
                 <div className="benefit-item flex items-start gap-md p-md">
                   <BookOpen className="w-6 h-6 text-secondary shrink-0 mt-1" />
                   <div>
@@ -306,7 +265,7 @@ export default function CareersPage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="benefits-image rounded-xl overflow-hidden shadow-lg h-[500px] relative w-full">
               <ParallaxImage
                 src="/images/growth_metrics.png"
@@ -338,7 +297,7 @@ export default function CareersPage() {
             <p className="text-body-md text-on-primary/75 max-w-xl mx-auto">
               Join our Talent Pool. We&apos;re always looking for exceptional engineers and strategists. Be the first to hear about new roles that match your expertise.
             </p>
-            
+
             {talentPoolSubmitted ? (
               <div className="p-md bg-white/10 rounded-xl border border-white/20 text-white max-w-md mx-auto animate-bounce">
                 <p className="font-bold text-headline-sm">Welcome aboard!</p>

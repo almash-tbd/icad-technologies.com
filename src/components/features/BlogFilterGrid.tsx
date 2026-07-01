@@ -31,7 +31,7 @@ export default function BlogFilterGrid() {
   });
 
   const totalPages = Math.ceil(filteredArticles.length / itemsPerPage);
-  
+
   // Slice articles for pagination
   const startIndex = (currentPage - 1) * itemsPerPage;
   const paginatedArticles = filteredArticles.slice(startIndex, startIndex + itemsPerPage);
@@ -48,42 +48,10 @@ export default function BlogFilterGrid() {
 
   return (
     <>
-      {/* Category Filters Bar */}
-      <section 
-        className="px-margin-mobile md:px-margin-desktop py-md border-y border-outline-variant/30 bg-surface-container-low sticky top-16 z-40"
-        data-cursor-guide="Category Filters - Filter insights by technical topic"
-      >
-        <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-md">
-          <div className="flex items-center gap-xs overflow-x-auto pb-2 md:pb-0 scrollbar-thin">
-            {categories.map((cat, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleCategoryChange(cat)}
-                className={`px-md py-1.5 rounded-full font-label-md text-label-md transition-colors cursor-pointer shrink-0 ${
-                  activeCategory === cat
-                    ? "bg-primary text-on-primary"
-                    : "hover:bg-surface-container-high text-on-surface-variant bg-transparent"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-          <div className="relative w-full md:w-64">
-            <Search className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-outline" />
-            <input
-              type="text"
-              placeholder="Search articles..."
-              value={searchQuery}
-              onChange={(e) => handleSearchChange(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-outline-variant rounded-full text-label-md focus:outline-none focus:border-primary dark:bg-primary-container dark:text-on-primary dark:border-primary-fixed-dim/20"
-            />
-          </div>
-        </div>
-      </section>
+
 
       {/* Articles Grid */}
-      <section 
+      <section
         className="px-margin-mobile md:px-margin-desktop py-xl"
         data-cursor-guide="Articles - Read stories on enterprise software strategy"
       >
@@ -148,17 +116,16 @@ export default function BlogFilterGrid() {
                   >
                     Previous
                   </button>
-                  
+
                   <div className="flex gap-xs">
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                       <button
                         key={page}
                         onClick={() => setCurrentPage(page)}
-                        className={`w-10 h-10 rounded-full font-label-md text-label-md transition-colors cursor-pointer flex items-center justify-center ${
-                          currentPage === page
+                        className={`w-10 h-10 rounded-full font-label-md text-label-md transition-colors cursor-pointer flex items-center justify-center ${currentPage === page
                             ? "bg-primary text-on-primary"
                             : "hover:bg-surface-container-high text-on-surface-variant bg-transparent border border-outline-variant/30 dark:text-zinc-300 dark:hover:bg-zinc-800"
-                        }`}
+                          }`}
                       >
                         {page}
                       </button>
